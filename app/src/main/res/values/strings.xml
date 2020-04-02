@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Corona Alert Pakistan</string>
+    <string name="research">Research</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="news_feed">News Feed</string>
+    <string name="precautions">Safety Measures</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

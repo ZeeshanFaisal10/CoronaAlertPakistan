@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/mydashboard"
+        android:icon="@drawable/ic_dashboard"
+        android:title="@string/dashboard"
+
+        />
+
+    <item android:id="@+id/mynews"
+        android:icon="@drawable/news"
+        android:title="@string/news_feed"
+
+        />
+
+    <item android:id="@+id/myresearch"
+        android:icon="@drawable/research"
+        android:title="@string/research"
+
+        />
+
+    <item android:id="@+id/mysafetymeasures"
+        android:icon="@drawable/safetymeasures"
+        android:title="@string/precautions"
+
+        />
+</menu>
