@@ -11,6 +11,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.coronaalertpakistan.HelperClasses.InternetChecker;
@@ -24,6 +26,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 public class MainPage extends AppCompatActivity {
 
     BottomNavigationView navigationView;
+    ProgressBar progressBar;
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
     Fragment showFragment = null;
@@ -33,13 +36,16 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
         getSupportActionBar().setTitle("Dashboard");
         fragmentManager = getSupportFragmentManager();
+        progressBar = findViewById(R.id.my_progressbar);
         fragmentTransaction = fragmentManager.beginTransaction();
         navigationView = findViewById(R.id.myBottView);
         navigationView.setOnNavigationItemSelectedListener(bottomNavListener);
+
         initializeUI();
     }
 
     private void initializeUI() {
+
         if (showFragment == null){
             showFragment = new DashBoardFragment();
             fragmentTransaction.replace(R.id.fragment_container,showFragment).commit();
@@ -68,6 +74,7 @@ public class MainPage extends AppCompatActivity {
                 case R.id.mysafetymeasures:
                     getSupportActionBar().setTitle("Safety Measures");
                     showFragment = new SafetyPrecautionFragment();
+                    progressBar.setVisibility(View.INVISIBLE);
                     break;
             }
             getSupportFragmentManager().beginTransaction()
@@ -91,7 +98,7 @@ public class MainPage extends AppCompatActivity {
     public void onBackPressed() {
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage("Are you sure You wanted to exit?7");
+        alertDialogBuilder.setMessage("Are you sure You wanted to exit?");
                 alertDialogBuilder.setPositiveButton("yes",
                         new DialogInterface.OnClickListener() {
                             @Override

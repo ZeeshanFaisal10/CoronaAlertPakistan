@@ -10,7 +10,7 @@ import com.example.coronaalertpakistan.R;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static int SplashTimeOut = 2000;
+    private static int SplashTimeOut = 1000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
