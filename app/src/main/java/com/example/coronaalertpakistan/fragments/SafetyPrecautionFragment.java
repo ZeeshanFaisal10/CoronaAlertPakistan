@@ -15,6 +15,7 @@ import com.example.coronaalertpakistan.R;
 
 /**
  * A simple {@link Fragment} subclass.
+ *
  */
 public class SafetyPrecautionFragment extends Fragment {
 
